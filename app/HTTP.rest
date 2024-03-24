@@ -1,0 +1,10 @@
+@host=http://127.0.0.1:8000
+@react_base_url = {{host}}/api/
+@public_header = Content-Type: applicatio/json\r\nAccept: application/json\r\nAccept-Language: en
+@auth_header = Content-Type: application/json\r\nAccept: application/json\r\nAccept-Language: en\r\nAuthorization: Bearer 
+
+# @name ping
+GET {{react_base_url}}/ping HTTP/1.1
+{{public_header}}
+###
+
