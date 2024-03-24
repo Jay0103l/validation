@@ -71,6 +71,12 @@ return [
             'after_commit' => false,
         ],
 
+        'notification' => [
+                'driver' => 'redis',
+                'connection' => 'default', 
+                'queue' => env('REDIS_QUEUE', 'default'),
+            ],
+
     ],
 
     /*

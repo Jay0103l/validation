@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::middleware('cache.headers:public;max_age=2628000;etag')->group(function()
+// {
+//     Route::get('/print', function(){
+//         return  "hello world";});
+//      Route::get('/printarray', function(){
+//         return  [1,2,3];});
+
+    Route::get('/cookie',function()
+        {
+            return response('hello world')->cookie(
+                'name','jay',2
+           );
+        //   return redirect('/api/store');
+        // return redirect()->away('https://www.google.com');
+        });
+// // });
